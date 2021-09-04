@@ -2,6 +2,9 @@ import React from "react";
 /* import {Route} from 'react-router-dom' */
 import DeafultHOC from "./HOC/Default.HOC"
 
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 function HomePage(){
   return(<h1>Home Page</h1>)
 }
