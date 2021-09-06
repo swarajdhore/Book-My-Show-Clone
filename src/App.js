@@ -1,16 +1,11 @@
 import React from "react";
 /* import {Route} from 'react-router-dom' */
-import DeafultHOC from "./HOC/Default.HOC"
-
+import DefaultHOC from "./HOC/Default.HOC"
+import HomePage from "./pages/Home.Page";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-function HomePage(){
-  return(<h1>Home Page</h1>)
-}
-function Component(){
-  return(<h1>Contact Page</h1>)
-}
+
 
 function App(){
   return ( <> 
@@ -20,8 +15,7 @@ function App(){
       </button> */}
       {/* <Route path='/' exact component={HomePage} />
       <Route path='/contact' exact component={Contact} /> */}
-      <DeafultHOC path='/' exact component={HomePage} />
-      <DeafultHOC path='/contact' exact component={Component} />
+      <DefaultHOC path='/' exact component={HomePage} />
   </>
   );
 }
