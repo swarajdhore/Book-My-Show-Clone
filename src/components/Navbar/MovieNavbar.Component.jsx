@@ -1,30 +1,21 @@
 import React from 'react';
-import { BiMenu, BiChevronDown,BiSearch} from'react-icons/bi'
+import { BiMenu, BiChevronDown,BiSearch, BiShareAlt} from'react-icons/bi'
 
 function NavSm(){
     return<>
-        <div className=' text-white flex items-center justify-between'>
+        <div className='text-black flex items-center justify-between'>
             <div>
-                <h3 className='text-xl font-bold'>It all Starts Here !!</h3>
-                <span className='text-gray-400 text-xs flex items-center cursor-pointer hover:text-white'>
-                    Delhi NCR <BiChevronDown/>
-                </span>
+                <h3 className='text-xl font-bold'>
+                    Fast and Furious 9
+                </h3>
             </div>
             <div className='w-8 h-8'>
-                <BiSearch className='w-f h-full'/>
+                <BiShareAlt className='w-full h-full' />
             </div>
         </div>
     </>;
 }
 
-function NavMd(){
-    return<>
-         <div className='w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md'>
-                    <BiSearch/>
-                    <input type='search' className='w-full bg-transparent border-none focus:outline-none' placeholder='Search for movies, events, plays, sports and activities'/>
-                </div>
-    </>;
-}
 
 
 function NavLg(){
@@ -55,10 +46,10 @@ function NavLg(){
 }
 
 
-const Navbar = () =>{
+const MovieNavbar = () =>{
     return(
         <>
-            <nav className='bg-darkBackground-700 px-4 py-3'>
+            <nav className='lg:border-b-2 bg-white backdrop-blur-lg lg:bg-darkBackground-700 p-4 border-b-2'>
                 <div className='md:hidden'>
                     {/* Mobile Screen */}
                     <NavSm />
@@ -66,7 +57,7 @@ const Navbar = () =>{
                 </div>
                 <div className='hidden md:flex lg:hidden'>
                     {/* Medium/Tab Screen */}
-                    <NavMd />
+                    <NavSm />
                 </div>
                 <div>
                     <div className='hidden w-full lg:flex'>
@@ -79,4 +70,4 @@ const Navbar = () =>{
     )
 }
 
-export default Navbar;
+export default MovieNavbar;
