@@ -1,6 +1,7 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import HeroSlider from "react-slick";
 import axios from "axios";
+
 //Arrow components
 import { NextArrow, PrevArrow } from "./Arrows.Component";
 
@@ -8,13 +9,13 @@ const HeroCarousel = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        
-        const requestNowPlayingMovies = async () =>{
+        const requestNowPlayingMovies = async () => {
             const getImages = await axios.get("/movie/now_playing");
-            setImages(getImages.data.results)
+            setImages(getImages.data.results);
         };
+
         requestNowPlayingMovies();
-    },[]);
+    }, []);
 
     const settingsLG = {
         arrows: true,
@@ -47,7 +48,7 @@ const HeroCarousel = () => {
                             <img
                                 src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
                                 alt="Hero Banner"
-                                className="w-full h-full rounded-md object-center object-cover"
+                                className="w-full h-full rounded-md object-center "
                             />
                         </div>
                     ))}
@@ -60,7 +61,7 @@ const HeroCarousel = () => {
                             <img
                                 src={`https://image.tmdb.org/t/p/original${image.backdrop_path}`}
                                 alt="Hero Banner"
-                                className="w-full h-full rounded-md object-center"
+                                className="w-full h-full rounded-md object-center "
                             />
                         </div>
                     ))}
